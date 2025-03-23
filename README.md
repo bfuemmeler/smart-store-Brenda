@@ -4,10 +4,6 @@
 
 ### Verify You've Created a Local Project Virtual Environment
 
-This assumes you have a local project virtual environment on your machine in the .venv folder. 
-
-In VS Code, in your project repository folder, open a new terminal. (Terminal / New Terminal. I use the default on Mac and PowerShell on Windows.)
-
 Create a virtual environment:
 ```shell
 python -m venv .venv
