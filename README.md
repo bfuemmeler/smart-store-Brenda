@@ -47,6 +47,14 @@ python -m pip install <package_name>
 # create logger.py file
 # create data_prep.py file
 
+## Create Data Files
+# Create customers_data
+# Create products_data
+# Create sales_data
+
+## Data Collection
+# Add new columns with fake data
+
 
 
 
