@@ -74,8 +74,15 @@ py scripts\data_prep.py
 ```
 ### P4 Create and Populate DW
 # Plan Data Warehouse
+  Design Schema- Star
+  Fact Table- Sales
+  Dimension Tables- Products and Customers
+  Upload CSV files to DB for SQLite
+  Create smart_sales.db file within data/dw
 # Define, Create, Populate DW Schema
-  Implement script, debug & run script
+  Create etl_to_dw.py script
+  Implement script, debug & run
+
 # Validate Data Warehouse
 # Document & Submit Work
 
