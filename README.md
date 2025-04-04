@@ -72,5 +72,11 @@ In Windows / PowerShell:
 ```shell
 py scripts\data_prep.py
 ```
+### P4 Create and Populate DW
+# Plan Data Warehouse
+# Define, Create, Populate DW Schema
+  Implement script, debug & run script
+# Validate Data Warehouse
+# Document & Submit Work
 
 
