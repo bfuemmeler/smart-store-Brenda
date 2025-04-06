@@ -86,4 +86,53 @@ py scripts\data_prep.py
 # Validate Data Warehouse
 # Document & Submit Work
 
+### P5 Cross-Platform Reporting with Power BI
+## 1 Install SQLite ODBC Driver and configure DSN to link Power BI to database
+## 2 In Power BI: Get Data > Select ODBC > Choose SQLite DSN, load customer, product & sales tables
+## 3 In Power BI: Open Transform Data > Advanced Editor > add SQL code
+    "SELECT customer.CustomerID, customer.Name, SUM(sale.SaleAmount) AS total_revenue FROM customer INNER JOIN sale ON customer.CustomerID = sale.CustomerID GROUP BY customer.CustomerID, customer.Name#(lf)"
+    Name the table Top Customers
+## 4 Load & review results
+
+## 5 Slice, Dice Drilldown
+# Add a date range slicer
+    Add the Slicer visual, drag SaleDate column into Slicer
+    With Date Field selected, it should let you toggle the Between dates to filter the range
+    ![alt text](image-1.png)
+      ***Use ChatGPT notes to change field from TEXT to DATE so the slicer will allow "between"
+# Create a matrix visual for sales by product & region
+    Add the Matrix visual, drag Product into Rows, drag Region into Columns, Drag SaleAmount into Values
+    ![alt text](image.png)
+# Enable drill-through to explore sales by year, quarter, month
+    Add new visual and select Drillthrough. Drag SaleDate to Field
+    Drag Year, Quarter, Month to Drillthrough fields
+    ![alt text](image-3.png)
+
+## 6 Create Interactive Visualizations
+# Create bar chart for Top Customers
+  Add visual for Stacked Bar Chart. Choose Top Customers data 
+  ![alt text](image-2.png)
+
+# Create line chart for Sales Trends
+  Add visual for Line Chart. I chose Category, Sale Amount & Quarter
+  ![alt text](image-4.png)
+
+# Add a slicer for product categories
+  Add visual for Slicer. I used Category and Product Name
+  ![alt text](image-5.png)
+
+## Screenshot of Power BI Model View
+![alt text](image-7.png)
+
+## Screenshot of Query Results
+![alt text](image-8.png)
+
+## Screenshot of Final Dashboard/Charts
+![alt text](image-6.png)
+
+In VS Code, activate .venv   .\.venv\Scripts\activate
+git add .
+git commit -m "update ReadMe, add PowerBI screenshots"
+git push
+
 
