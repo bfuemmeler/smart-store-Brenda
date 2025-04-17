@@ -152,3 +152,33 @@
 2025-04-17 18:32:32.524 | INFO     | __main__:main:113 - Starting SALES_LOW_REVENUE_DAYOFWEEK analysis...
 2025-04-17 18:32:32.527 | INFO     | __main__:load_olap_cube:50 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
 2025-04-17 18:32:32.528 | ERROR    | __main__:analyze_sales_by_weekday:69 - Error analyzing sales by DayOfWeek: 'TotalSales'
+2025-04-17 18:32:55.087 | INFO     | __main__:main:113 - Starting SALES_LOW_REVENUE_DAYOFWEEK analysis...
+2025-04-17 18:32:55.090 | INFO     | __main__:load_olap_cube:50 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-17 18:32:55.101 | INFO     | __main__:analyze_sales_by_weekday:66 - Sales aggregated by DayOfWeek successfully.
+2025-04-17 18:32:55.101 | INFO     | __main__:identify_least_profitable_day:77 - Least profitable day: Friday with revenue $8617.76.
+2025-04-17 18:32:55.102 | INFO     | __main__:main:123 - Least profitable day: Friday
+2025-04-17 18:32:55.102 | INFO     | __main__:main:124 - Close the Figure to complete this script.
+2025-04-17 18:32:55.909 | INFO     | __main__:visualize_sales_by_weekday:104 - Visualization saved to data\results\sales_by_day_of_week.png.
+2025-04-17 18:37:32.961 | INFO     | __main__:main:128 - Analysis and visualization completed successfully.
+2025-04-17 18:37:33.857 | INFO     | __main__:main:201 - Starting OLAP Cubing process...
+2025-04-17 18:37:33.864 | INFO     | __main__:ingest_sales_data_from_dw:103 - Sales data successfully loaded from SQLite data warehouse.
+2025-04-17 18:37:33.873 | INFO     | __main__:create_olap_cube:154 - OLAP cube created with dimensions: ['Day', 'ProductID', 'CustomerID']
+2025-04-17 18:37:33.877 | INFO     | __main__:write_cube_to_csv:193 - OLAP cube saved to data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-17 18:37:33.877 | INFO     | __main__:main:225 - OLAP Cubing process completed successfully.
+2025-04-17 18:37:33.877 | INFO     | __main__:main:226 - Please see outputs in data\olap_cubing_outputs
+2025-04-17 18:37:34.534 | INFO     | __main__:main:113 - Starting SALES_LOW_REVENUE_DAYOFWEEK analysis...
+2025-04-17 18:37:34.538 | INFO     | __main__:load_olap_cube:50 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-17 18:37:34.539 | INFO     | __main__:analyze_sales_by_weekday:66 - Sales aggregated by DayOfWeek successfully.
+2025-04-17 18:37:34.540 | INFO     | __main__:identify_least_profitable_day:77 - Least profitable day: Friday with revenue $8617.76.
+2025-04-17 18:37:34.540 | INFO     | __main__:main:123 - Least profitable day: Friday
+2025-04-17 18:37:34.553 | INFO     | __main__:main:124 - Close the Figure to complete this script.
+2025-04-17 18:37:34.705 | INFO     | __main__:visualize_sales_by_weekday:104 - Visualization saved to data\results\sales_by_day_of_week.png.
+2025-04-17 18:37:42.156 | INFO     | __main__:main:128 - Analysis and visualization completed successfully.
+2025-04-17 18:37:43.034 | INFO     | __main__:main:113 - Starting SALES_LOW_REVENUE_DAYOFWEEK analysis...
+2025-04-17 18:37:43.037 | INFO     | __main__:load_olap_cube:50 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-17 18:37:43.039 | INFO     | __main__:analyze_sales_by_weekday:66 - Sales aggregated by DayOfWeek successfully.
+2025-04-17 18:37:43.039 | INFO     | __main__:identify_least_profitable_day:77 - Least profitable day: Friday with revenue $8617.76.
+2025-04-17 18:37:43.040 | INFO     | __main__:main:123 - Least profitable day: Friday
+2025-04-17 18:37:43.040 | INFO     | __main__:main:124 - Close the Figure to complete this script.
+2025-04-17 18:37:43.228 | INFO     | __main__:visualize_sales_by_weekday:104 - Visualization saved to data\results\sales_by_day_of_week.png.
+2025-04-17 18:37:46.277 | INFO     | __main__:main:128 - Analysis and visualization completed successfully.
