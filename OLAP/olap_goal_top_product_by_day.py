@@ -56,11 +56,11 @@ def analyze_top_product_by_weekday(cube_df: pd.DataFrame) -> pd.DataFrame:
     """Identify the product with the highest revenue for each day of the week."""
     try:
         # Group by DayOfWeek and product_id, sum the sales
-        grouped = cube_df.groupby(["DayOfWeek", "product_id"])["sale_amount_usd_sum"].sum().reset_index()
-        grouped.rename(columns={"sale_amount_usd_sum": "TotalSales"}, inplace=True)
+        grouped = cube_df.groupby(["Day", "ProductID"])["SaleAmount_sum"].sum().reset_index()
+        grouped.rename(columns={"SaleAmount_sum": "TotalSales"}, inplace=True)
 
         # Sort within each day to find the top product
-        top_products = grouped.sort_values(["DayOfWeek", "TotalSales"], ascending=[True, False]).groupby("DayOfWeek").head(1)
+        top_products = grouped.sort_values(["Day", "TotalSales"], ascending=[True, False]).groupby("Day").head(1)
         logger.info("Top products identified for each day of the week.")
         return top_products
     except Exception as e:
@@ -73,9 +73,9 @@ def visualize_sales_by_weekday_and_product(cube_df: pd.DataFrame) -> None:
     try:
         # Pivot the data to organize sales by DayOfWeek and ProductID
         sales_pivot = cube_df.pivot_table(
-            index="DayOfWeek",
-            columns="product_id",
-            values="sale_amount_usd_sum",
+            index="Day",
+            columns="ProductID",
+            values="SaleAmount_sum",
             aggfunc="sum",
             fill_value=0
         )

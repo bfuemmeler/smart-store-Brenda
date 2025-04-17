@@ -182,3 +182,11 @@
 2025-04-17 18:37:43.040 | INFO     | __main__:main:124 - Close the Figure to complete this script.
 2025-04-17 18:37:43.228 | INFO     | __main__:visualize_sales_by_weekday:104 - Visualization saved to data\results\sales_by_day_of_week.png.
 2025-04-17 18:37:46.277 | INFO     | __main__:main:128 - Analysis and visualization completed successfully.
+2025-04-17 18:38:51.065 | INFO     | __main__:main:110 - Starting SALES_TOP_PRODUCT_BY_WEEKDAY analysis...
+2025-04-17 18:38:51.068 | INFO     | __main__:load_olap_cube:48 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-17 18:38:51.068 | ERROR    | __main__:analyze_top_product_by_weekday:67 - Error analyzing top product by DayOfWeek: 'DayOfWeek'
+2025-04-17 18:40:52.728 | INFO     | __main__:main:110 - Starting SALES_TOP_PRODUCT_BY_WEEKDAY analysis...
+2025-04-17 18:40:52.730 | INFO     | __main__:load_olap_cube:48 - OLAP cube data successfully loaded from data\olap_cubing_outputs\multidimensional_olap_cube.csv.
+2025-04-17 18:40:52.734 | INFO     | __main__:analyze_top_product_by_weekday:64 - Top products identified for each day of the week.
+2025-04-17 18:40:53.021 | INFO     | __main__:visualize_sales_by_weekday_and_product:101 - Stacked bar chart saved to data\results\sales_by_day_and_product.png.
+2025-04-17 18:41:14.634 | INFO     | __main__:main:121 - Analysis and visualization completed successfully.
