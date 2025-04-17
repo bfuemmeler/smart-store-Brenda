@@ -113,3 +113,10 @@
 2025-04-04 09:52:33.034 | INFO     | __main__:main:85 - ========================
 2025-04-04 09:52:33.034 | INFO     | __main__:main:86 - Starting PRODUCTS prep
 2025-04-04 09:52:33.034 | INFO     | __main__:main:87 - ========================
+2025-04-16 17:44:25.863 | INFO     | __main__:main:209 - Starting OLAP Cubing process...
+2025-04-16 17:44:25.873 | INFO     | __main__:ingest_sales_data_from_dw:113 - Sales data successfully loaded from SQLite data warehouse.
+2025-04-16 17:44:25.877 | ERROR    | __main__:create_olap_cube:165 - Error creating OLAP cube: "Column(s) ['sale_amount_usd'] do not exist"
+2025-04-16 17:56:34.692 | INFO     | __main__:main:209 - Starting OLAP Cubing process...
+2025-04-16 17:56:34.695 | INFO     | __main__:ingest_sales_data_from_dw:113 - Sales data successfully loaded from SQLite data warehouse.
+2025-04-16 18:00:38.565 | INFO     | __main__:main:209 - Starting OLAP Cubing process...
+2025-04-16 18:00:38.568 | INFO     | __main__:ingest_sales_data_from_dw:113 - Sales data successfully loaded from SQLite data warehouse.

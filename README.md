@@ -135,4 +135,51 @@ git add .
 git commit -m "update ReadMe, add PowerBI screenshots"
 git push
 
+### P6. BI Insights and Storytelling
+## Objectives
+  -Analyze data using OLAP, slicing, dicing, and drilldown techniques to identify business insights.
+  -Design a clear business question and define the data and metrics required to address it.
+  -Use Python (or an alternate tool) to implement OLAP-style queries and analysis.
+  -Present insights using clear visualizations and explain the business implications.
+  -Describe the logic, process, and challenges behind your OLAP implementation.
 
+## Task 1- Choose a Specific Business Goal
+  Example 1: Sales by Day   use script in olap_goal_sales_by_day.py
+  Example 2: Top Product by Day  use script in olap_goal_top_product_by_day.py
+  Possible Goal: Campaign Effectiveness
+
+## Task 2- Plan your OLAP analysis
+  Choose data source: prebuilt cube, data warehouse, prepared data
+  Plan the workflow: Tables, columns, scripts, output names
+
+## Task 3- Implement OLAP Analysis
+  Select and configure tools- Python, Tableau, PowerBI
+  Explain choice and describe workflow
+
+  Perform Data Analysis: Slicing, Dicing, Drilldown
+
+  Test and Validate
+    Test OLAP queries to make sure they return reasonable results
+    Validate the analysis is actionable and meaningful to the business
+    Double-check calculations to verify they make sense
+    Compare totals from the cube and data warehouse for consistency
+
+## Task 4- Present Results and Visualizations
+  Options: Bar Charts, Line Charts, Pivot tables 
+
+## Task 5- Document and Submit Work
+# Summary of Project
+  Business Goal
+  Data Source
+  Tools
+  Workflow & Logic
+  Results
+  Suggested Business Action
+  Challenges
+
+In VS Code, activate .venv   .\.venv\Scripts\activate
+git add .
+git commit -m "update ReadMe, add PowerBI screenshots"
+git push
+
+  
