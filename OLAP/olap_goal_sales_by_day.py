@@ -59,9 +59,9 @@ def analyze_sales_by_weekday(cube_df: pd.DataFrame) -> pd.DataFrame:
     try:
         # Group by DayOfWeek and sum the sales
         sales_by_weekday = (
-            cube_df.groupby("DayOfWeek")["sale_amount_usd_sum"].sum().reset_index()
+            cube_df.groupby("Day")["SaleAmount_sum"].sum().reset_index()
         )
-        sales_by_weekday.rename(columns={"sale_amount_usd_sum": "TotalSales"}, inplace=True)
+        sales_by_weekday.rename(columns={"SaleAmount_sum": "TotalSales"}, inplace=True)
         sales_by_weekday.sort_values(by="TotalSales", inplace=True)
         logger.info("Sales aggregated by DayOfWeek successfully.")
         return sales_by_weekday
@@ -75,9 +75,9 @@ def identify_least_profitable_day(sales_by_weekday: pd.DataFrame) -> str:
     try:
         least_profitable_day = sales_by_weekday.iloc[0]
         logger.info(
-            f"Least profitable day: {least_profitable_day['DayOfWeek']} with revenue ${least_profitable_day['TotalSales']:.2f}."
+            f"Least profitable day: {least_profitable_day['Day']} with revenue ${least_profitable_day['TotalSales']:.2f}."
         )
-        return least_profitable_day["DayOfWeek"]
+        return least_profitable_day["Day"]
     except Exception as e:
         logger.error(f"Error identifying least profitable day: {e}")
         raise
@@ -88,7 +88,7 @@ def visualize_sales_by_weekday(sales_by_weekday: pd.DataFrame) -> None:
     try:
         plt.figure(figsize=(10, 6))
         plt.bar(
-            sales_by_weekday["DayOfWeek"],
+            sales_by_weekday["Day"],
             sales_by_weekday["TotalSales"],
             color="skyblue",
         )

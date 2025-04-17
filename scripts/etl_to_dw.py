@@ -83,15 +83,15 @@ def delete_existing_records(cursor: sqlite3.Cursor) -> None:
 
 def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert customer data into the customer table."""
-    customers_df.to_sql("customer", cursor.connection, if_exists="append", index=False)
+    customers_df.to_sql("customer", cursor.connection, if_exists="replace", index=False)
 
 def insert_products(products_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert product data into the product table."""
-    products_df.to_sql("product", cursor.connection, if_exists="append", index=False)
+    products_df.to_sql("product", cursor.connection, if_exists="replace", index=False)
 
 def insert_sales(sales_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert sales data into the sales table."""
-    sales_df.to_sql("sale", cursor.connection, if_exists="append", index=False)
+    sales_df.to_sql("sale", cursor.connection, if_exists="replace", index=False)
 
 def load_data_to_db() -> None:
     try:
@@ -104,9 +104,9 @@ def load_data_to_db() -> None:
         delete_existing_records(cursor)
 
         # Load prepared data using pandas
-        customers_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("C:\Projects\smart-store-Brenda\data\prepared\customers_data_prepared.csv"))
-        products_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("C:\Projects\smart-store-Brenda\data\prepared\products_data_prepared.csv"))
-        sales_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("C:\Projects\smart-store-Brenda\data\prepared\sales_data_prepared.csv"))
+        customers_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("C:/Projects/smart-store-Brenda/data\prepared/customers_data_prepared.csv"))
+        products_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("C:/Projects/smart-store-Brenda/data\prepared/products_data_prepared.csv"))
+        sales_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("C:/Projects/smart-store-Brenda\data/prepared/sales_data_prepared.csv"))
 
         # Insert data into the database
         insert_customers(customers_df, cursor)

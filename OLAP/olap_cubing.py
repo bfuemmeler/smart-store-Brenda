@@ -2,52 +2,42 @@
 Module 6: OLAP and Cubing Script
 File: scripts/olap_cubing.py
 
-A cube is a precomputed, multidimensional structure 
-where data is aggregated across all possible 
-combinations of selected dimensions 
+A cube is a precomputed, multidimensional structure where data is aggregated across all possible combinations of selected dimensions 
 (e.g., DayOfWeek, ProductID).
 
 Purpose: It allows for fast querying and analysis 
-across many dimensions without needing to 
-compute aggregations on the fly.
-Structure: The result is stored as a 
-multidimensional dataset that can be 
-queried with SQL-like syntax 
-or visualized in BI tools.
-
+across many dimensions without needing to compute aggregations on the fly.
+Structure: The result is stored as a multidimensional dataset that can be queried with SQL-like syntax or visualized in BI tools.
 
 This example script handles OLAP cubing with Python. 
-It ingests data from a data warehouse,
-performs aggregations for multiple dimensions, 
+It ingests data from a data warehouse, performs aggregations for multiple dimensions, 
 and creates OLAP cubes. 
 The cubes are saved as CSV files for further analysis.
 Cubes might also be kept in Power BI, Snowflake, Looker, or another tool.
 
 Input Data:
 
-- A fact table (sales): Includes sale_date, product_id, customer_id, sale_amount, etc.
-- Dimension tables: Define attributes like products, customers, and more
+- A fact table (sales): Includes SaleDate, ProductID, CustomerID, SaleAmount, etc.
+- Dimension tables: Define attributes like products, customers, and sales
 
 Output Cube:
 
 - The cube contains precomputed totals, averages, counts, 
-and other metrics for all combinations of DayOfWeek, ProductID, and CustomerID.
+and other metrics for all combinations of Day, ProductID, and CustomerID.
 
 AFTER CREATION, we can Query the Cube:
 
 - Slice: e.g., Extract sales for a specific customer (or specific store or region, depending on your data).
 - Dice: e.g., Filter sales for specific combinations of ProductID and other (e.g., store, region, campaign, depending on your data)
-- Drill-down: e.g., Aggregate sales by DayOfWeek (within a specific store or region, depending on your data)
+- Drill-down: e.g., Aggregate sales by Day (within a specific store or region, depending on your data)
 
-IMPORTANT: The OLAP cubing script needs to align 
-with your data warehouse (DW) structure and 
+IMPORTANT: The OLAP cubing script needs to align with your data warehouse (DW) structure and 
 the etl_to_dw.py script that defines your database schema. 
 
 THIS EXAMPLE INPUTS DIMENSION AND FACT TABLES:
 
 This example assumes a simple data warehouse structure with one fact table (`sale`) 
-and two dimension tables (`product` and `customer`). These tables collectively enable 
-multidimensional analysis using OLAP cubing.
+and two dimension tables (`product` and `customer`). These tables collectively enable multidimensional analysis using OLAP cubing.
 
 DIMENSION TABLES:
 
@@ -152,11 +142,13 @@ def create_olap_cube(
         cube = grouped.agg(metrics).reset_index()
 
         # Add a list of sale IDs for traceability
-        cube["TransactionID"] = grouped["TransactionID"].apply(list).reset_index(drop=True)
+        cube["TransactionIDs"] = grouped["TransactionID"].apply(list).reset_index(drop=True)
 
         # Generate explicit column names
         explicit_columns = generate_column_names(dimensions, metrics)
-        explicit_columns.append("TransactionID")  # Include the traceability column
+        explicit_columns.append("TransactionIDs")  # Include the traceability column
+
+    
         cube.columns = explicit_columns
 
         logger.info(f"OLAP cube created with dimensions: {dimensions}")
