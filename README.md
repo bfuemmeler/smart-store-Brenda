@@ -146,7 +146,7 @@ git push
 ## Task 1- Choose a Specific Business Goal
   Example 1: Sales by Day   use script in olap_goal_sales_by_day.py
   Example 2: Top Product by Day  use script in olap_goal_top_product_by_day.py
-  Possible Goal: Campaign Effectiveness
+  
 
 ## Task 2- Plan your OLAP analysis
   Choose data source: prebuilt cube, data warehouse, prepared data
