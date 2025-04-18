@@ -144,9 +144,10 @@ git push
   -Describe the logic, process, and challenges behind your OLAP implementation.
 
 ## Task 1- Choose a Specific Business Goal
+  Script olap_cubing.py to build the cube
   Example 1: Sales by Day   use script in olap_goal_sales_by_day.py
   Example 2: Top Product by Day  use script in olap_goal_top_product_by_day.py
-  
+  Goal: Product Top Sellers by Store use script in olap_goal_product_top_sellers_by_qty.py
 
 ## Task 2- Plan your OLAP analysis
   Choose data source: prebuilt cube, data warehouse, prepared data
