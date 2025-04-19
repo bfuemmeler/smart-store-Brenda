@@ -223,15 +223,56 @@ HeatMap created for Transaction Volume by Product Name and Store (result of olap
   Using AI for BI and resulting decision-making must be done very carefully.
   A BI team must be sure they have used accurate data with no bias or skewed information.
 
-# Document and Submit Work (use Markdown formatting)
-Section 1. The Business Goal
-Section 2. Data Source
-Section 3. Tools Used
-Section 4. Workflow & Logic
-Section 5. Results (narrative + visualizations)
-Section 6. Suggested Business Action
-Section 7. Challenges
-Section 8. Ethical Considerations
+### Document and Submit Work 
+## Section 1. The Business Goal
+  Segment Customers for Marketing
+
+## Section 2. Data Source
+  smart_sales.db
+
+## Section 3. Tools Used
+  Python, SQLite, numpy, pandas, seaborn, matplotlib, sklearn
+  ChatGPT to assist with script building
+  
+## Section 4. Workflow & Logic
+  Build a script to segment the customers and create visualizations around customer purchases
+
+## Section 5. Results (narrative + visualizations)
+  The results of my script segmented the customers and created a cluster. 
+  Then it provided different types of visualizations to include pair plot, bar plot and scatter plot.
+![alt text](image-12.png) 
+This plot shows that Customer Segment 2 (in green) are high-dollar spenders and 
+they have purchased these items recently. It also shows that our lower-dollar spenders 
+have purchased less recently.
+
+![alt text](image-13.png)
+This visual brings in purchase frequency and gives a visual of this up 
+against Recency and Monetary values. The highest frequency segement is Segment 0 (in blue).
+While this segment are frequent buyers, they are not always big spenders. 
+
+![alt text](image-14.png)
+This bar graph shows Average RFM for Each Customer Segment. It also shows that Segment
+2 are the largest spenders.
+
+![alt text](image-15.png)
+This is a 3D Scatter Plot that shows the RFM Segmentation from a different viewpoint.
+It points out that our lowest frequency and less recent purchases are from Segment 1 (in red).
+
+## Section 6. Suggested Business Action
+  Based on the results of these visualizations, the business stakeholders have several 
+  opportunities for continued growth. Marketing to frequent spenders is just as important
+  as it is to lower-spend, less-frequent customers. The only difference is the marketing tools
+  and approach you may want to take to reach out to each segment.
+
+## Section 7. Challenges
+  No major challenges with this project. Mainly making sure data points are clear and clean.
+  Also making sure the visualizations truly told the story we wanted to feature.
+
+## Section 8. Ethical Considerations
+  As always, the BI team wants to make sure there is no bias in the data they present.
+  Working with clean data that has been checked for missing fields, errors or other 
+  issues that can skew outputs is imperitive.
+
 
 # Final update to GitHub
 In VS Code, activate .venv   .\.venv\Scripts\activate
