@@ -183,4 +183,58 @@ git add .
 git commit -m "update ReadMe, add PowerBI screenshots"
 git push
 
+Visualizations:
+Bar Graph created for Total Sales by Day of the Week (result of olap_goal_sales_by_day.py)
+![alt text](image-9.png)
+
+Stacked Bar Graph created for Total Sales by Day of the Week and Product (result of olap_goal_top_product_by_day.py)
+![alt text](image-10.png)
+
+HeatMap created for Transaction Volume by Product Name and Store (result of olap_goal_product_top_sellers_by_qty.py)
+![alt text](image-11.png)
   
+## P7 Custom BI Project
+# Objectives
+  Design and implement a custom BI project to answer a defined business question.
+  Evaluate the ethical implications of using AI and automated decision-making in BI.
+  Present clear, actionable insights through effective visualizations and narratives.
+  Document your process and explain key challenges and decisions.
+
+# Workflow
+  Define - Choose a business goal and data set.
+  Develop - Create a BI solution using the tools from previous modules.
+  Analyze - Generate insights using slicing, dicing, and aggregations.
+  Present - Summarize insights with clear visualizations and explanations.
+  Reflect - Discuss the challenges, limitations, and ethical considerations.
+
+# My Goal
+  Segmenting Customers for Marketing
+  Show Total Spend, Purchase frequency, Recency, Category preferences
+
+# My BI Solution
+  Use Python to segment, aggregate, cluster
+
+# Generate Insights and Create Visualizations
+
+# Reflect on BI Ethics and AI
+  The ethical implications around any BI project can have enormous impact on a business. 
+  There are many laws and governances that would require a business to use ethical means to gather, store and manage
+  their data. How that data is used by stakeholders is extremely impactful. 
+  Using AI for BI and resulting decision-making must be done very carefully.
+  A BI team must be sure they have used accurate data with no bias or skewed information.
+
+# Document and Submit Work (use Markdown formatting)
+Section 1. The Business Goal
+Section 2. Data Source
+Section 3. Tools Used
+Section 4. Workflow & Logic
+Section 5. Results (narrative + visualizations)
+Section 6. Suggested Business Action
+Section 7. Challenges
+Section 8. Ethical Considerations
+
+# Final update to GitHub
+In VS Code, activate .venv   .\.venv\Scripts\activate
+git add .
+git commit -m "update ReadMe, add PowerBI screenshots"
+git push
